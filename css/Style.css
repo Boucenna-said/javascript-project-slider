@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.slider-container {
+  margin: 10px auto;
+  width: 650px;
+  height: 480px;
+  position: relative;
+}
+
+.slider-container img {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 1;
+}
+
+.slider-container img.active {
+  opacity: 1;
+}
+
+.slider-container .slider-number {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 20px;
+  z-index: 2;
+  border-radius: 6xp;
+}
+
+.slider-controles {
+  width: 650px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider-controles .prev,
+.slider-controles .next {
+  background-color: #009688;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 5px;
+  user-select: none;
+  width: 20%;
+}
+.slider-controles .prev {
+  float: left;
+}
+.slider-controles .next {
+  float: right;
+}
+
+.slider-controles .prev.disabled,
+.slider-controles .next.disabled {
+  background-color: #0096884d;
+  cursor: no-drop;
+}
+
+.slider-controles .paginations {
+  width: 60%;
+  float: left;
+}
+
+.slider-controles .paginations ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+
+.slider-controles .paginations ul li {
+  display: inline-block;
+  background-color: #f6f6f6;
+  color: #333;
+  font-weight: bold;
+  height: 28px;
+  width: 28px;
+  border-radius: 4px;
+  margin: 0 2px;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.slider-controles .paginations ul li.active {
+  background-color: #009688;
+}
